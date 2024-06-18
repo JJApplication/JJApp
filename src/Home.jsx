@@ -21,29 +21,6 @@ import live_demo_run from './code/live_demo.gif';
 
 
 export default function() {
-  const [offset, setOffset] = useState(0);
-  const [scroll, setScroll] = useState(false);
-
-  const scrollEvent = (() => {
-    const top = document.documentElement.scrollTop;
-    setOffset(top);
-  });
-
-  useEffect(() => {
-    window.addEventListener('scroll', scrollEvent);
-    return () => {
-      window.removeEventListener('scroll', scrollEvent);
-    };
-  });
-
-  useEffect(() => {
-    if (offset > 0) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
-  }, [offset, scrollEvent]);
-
   const nav = (url) => {
     open(url)
   }
@@ -169,7 +146,7 @@ export default function() {
           </div>
           <Text className={'home-page-title-first'}>JJApps Architecture</Text>
           <Spacer h={0.5} />
-          <Card width={'100%'} shadow>
+          <Card width={'100%'} shadow className={'wow bounceInLeft'} data-wow-delay="0.15s">
             <Card.Content style={{ width: 'unset' }}>
               <Grid.Container gap={1}>
                 <Grid md={12} sm={12} xs={24}>
@@ -198,7 +175,7 @@ export default function() {
           <Text className={'home-page-title-first'}>JJApps <Text span
                                                                  style={{ color: '#2289e5' }}>Components</Text></Text>
           <Grid.Container gap={2}>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>OctopusMeta</Text>
@@ -212,7 +189,7 @@ export default function() {
                 </Card.Content>
               </Card>
             </Grid>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>Fushin Stone</Text>
@@ -227,7 +204,7 @@ export default function() {
           </Grid.Container>
           <Spacer h={1} />
           <Grid.Container gap={2}>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>NoEngine</Text>
@@ -240,7 +217,7 @@ export default function() {
                 </Card.Content>
               </Card>
             </Grid>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>Rainbow Bridge</Text>
@@ -255,7 +232,7 @@ export default function() {
           </Grid.Container>
           <Spacer h={1} />
           <Grid.Container gap={2}>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>Container</Text>
@@ -266,7 +243,7 @@ export default function() {
                 </Card.Content>
               </Card>
             </Grid>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>Dreams In Bottle</Text>
@@ -282,7 +259,7 @@ export default function() {
           </Grid.Container>
           <Spacer h={1} />
           <Grid.Container gap={2}>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>Cloud Native</Text>
@@ -294,7 +271,7 @@ export default function() {
                 </Card.Content>
               </Card>
             </Grid>
-            <Grid md={12} sm={12} xs={24}>
+            <Grid md={12} sm={12} xs={24} className={'wow swing'} data-wow-delay="0.25s">
               <Card width={'100%'} height={'100%'}>
                 <Card.Content style={{ width: 'unset', fontSize: '1.125rem' }}>
                   <Text h1>Alarm Reporting</Text>
@@ -328,9 +305,9 @@ export default function() {
             </Tabs>
             <Spacer h={1} />
             <Text className={'home-page-title-second'}>Create your first microservice using <Text b>Fushin Stone</Text></Text>
-            <img src={live_demo} style={{ maxWidth: '100%', borderRadius: '0.5rem' }}/>
+            <img src={live_demo} style={{ maxWidth: '100%', borderRadius: '0.5rem' }} className={'wow slideInLeft'} data-wow-duration="0.5s" data-wow-delay="0.25s"/>
             <Text className={'home-page-title-second'}>The use case demo creates an <Code>http</Code> server and <Code>uds</Code> server.</Text>
-            <img src={live_demo_run} style={{ maxWidth: '100%', borderRadius: '0.5rem' }} />
+            <img src={live_demo_run} style={{ maxWidth: '100%', borderRadius: '0.5rem' }} className={'wow slideInLeft'} data-wow-duration="0.5s" data-wow-delay="0.5s"/>
             <Text className={'home-page-title-second'}>Read the full documentation at <Link href={urls.GoDoc} target={'_blank'} color>Fushin GoDoc</Link>.</Text>
             <Spacer h={4} />
             <Text className={'home-page-title-first'}>Infrastructure</Text>
