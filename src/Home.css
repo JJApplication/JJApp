@@ -1,0 +1,182 @@
+code {
+    color: rgb(249, 47, 94);
+}
+
+#home-page {
+    padding: 1rem 2rem;
+}
+
+#home-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 0.25rem 0 #efefef;
+}
+
+.home-header-menu {
+    display: inline-flex;
+    font-size: 1.25rem;
+    align-items: center;
+    padding-right: 1.5rem;
+
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-item {
+    margin: 0;
+    padding: 1rem 1.5rem;
+}
+
+.menu-item a {
+    color: #6D6D6D !important;
+}
+
+.menu-item a:hover {
+    color: #2A2A2A !important;
+}
+
+.home-header-menu .tooltip {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #222222;
+}
+
+.home-header-menu .head-link.link {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #222222;
+}
+
+.home-header-menu a:hover {
+    text-decoration: underline !important;
+}
+
+.home-page-body {
+    max-width: 85rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.home-page-footer {
+    background-color: #FAFAFA;
+    margin: 0 -2rem -1rem -2rem;
+    padding: 2rem 6rem;
+}
+
+.home-page-footer .footer-link {
+    color: #5A5A5A;
+}
+
+.home-page-footer .footer-link-a {
+    font-size: 1.25rem;
+    color: #6D6D6D !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/*首页Text字体*/
+.home-page-banner-first {
+    font-size: 5.5rem;
+    font-weight: bold;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.home-page-banner-second {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.home-page-banner-third {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.home-page-title-first {
+    font-size: 2.75rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 2rem 0;
+}
+
+.home-page-title-second {
+    font-size: 1.25rem;
+}
+
+/*适配分辨率*/
+@media (max-width: 480px) {
+    .home-page-banner-first {
+        font-size: 3.5rem;
+    }
+
+    .home-page-banner-second {
+        font-size: 1.5rem;
+    }
+
+    .home-page-banner-third {
+        font-size: 1rem;
+    }
+
+    .home-page-title-first {
+        font-size: 1.75rem;
+    }
+
+    .home-page-title-second {
+        font-size: 1rem;
+    }
+}
+
+.jjapps-logo {
+    cursor: pointer;
+    width: 20rem;
+    height: 20rem;
+    background: radial-gradient(circle, #ffffff 0%, #aaaaaa 10%, #eeeeee 25%, #888888 50%, #666666 60%, #111111 75%, #1f1f1f 100%);
+    border-radius: 50%;
+}
+
+.jjapps-logo:hover {
+    background: radial-gradient(circle, #1f1f1f 0%, #333333 10%, #444444 25%, #888888 50%, #aaaaaa 60%, #eeeeee 75%, #1f1f1f 100%);
+}
+
+.jjapps-logo-footer {
+    cursor: pointer;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: radial-gradient(circle, #ffffff 0%, #aaaaaa 10%, #eeeeee 25%, #888888 50%, #666666 60%, #111111 75%, #1f1f1f 100%);
+    border-radius: 50%;
+    margin: 1rem 1.25rem;
+}
+
+.jjapps-logo-footer:hover {
+    background: radial-gradient(circle, #1f1f1f 0%, #333333 10%, #444444 25%, #888888 50%, #aaaaaa 60%, #eeeeee 75%, #1f1f1f 100%);
+}
+
+.card.language .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card img.language-logo {
+    width: 2.5rem !important;
+    margin-right: 0.5rem;
+}
+
+.card .language-text {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+}
+
