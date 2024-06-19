@@ -1,10 +1,9 @@
 import { Button, Card, Code, Display, Divider, Grid, Link, Popover, Spacer, Tabs, Text } from '@geist-ui/core';
-import { Anchor, Compass, Github, Globe, LogIn } from '@geist-ui/icons';
+import {  Compass, Github, Globe } from '@geist-ui/icons';
 import './Home.css';
 import urls from './urls';
 import appImg from './assets/app.png';
-import design from './assets/design.png';
-import { useEffect, useState } from 'react';
+import design from './assets/design.jpg';
 import go from './icons/go-original.svg';
 import js from './icons/javascript-original.svg';
 import py from './icons/python-original.svg';
@@ -138,7 +137,7 @@ export default function() {
             </Grid>
           </div>
           <div style={{ margin: '2.5rem 0', width: '100%' }}>
-            <Display shadow caption='Design of JJApps'>
+            <Display shadow caption='Design of JJApps' className={'wow bounceInLeft'} data-wow-delay="0.15s">
               <div style={{ padding: '1rem' }}>
                 <img width='100%' height='100%' src={design} style={{ maxWidth: '100%' }} />
               </div>
@@ -307,7 +306,7 @@ export default function() {
             <Text className={'home-page-title-second'}>Create your first microservice using <Text b>Fushin Stone</Text></Text>
             <img src={live_demo} style={{ maxWidth: '100%', borderRadius: '0.5rem' }} className={'wow slideInLeft'} data-wow-duration="0.5s" data-wow-delay="0.25s"/>
             <Text className={'home-page-title-second'}>The use case demo creates an <Code>http</Code> server and <Code>uds</Code> server.</Text>
-            <img src={live_demo_run} style={{ maxWidth: '100%', borderRadius: '0.5rem' }} className={'wow slideInLeft'} data-wow-duration="0.5s" data-wow-delay="0.5s"/>
+            <img src={live_demo_run} style={{ maxWidth: '100%', borderRadius: '0.5rem' }} className={'wow slideInLeft'} data-wow-duration="0.5s" data-wow-delay="0.35s"/>
             <Text className={'home-page-title-second'}>Read the full documentation at <Link href={urls.GoDoc} target={'_blank'} color>Fushin GoDoc</Link>.</Text>
             <Spacer h={4} />
             <Text className={'home-page-title-first'}>Infrastructure</Text>
