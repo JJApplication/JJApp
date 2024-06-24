@@ -139,7 +139,7 @@ export default function() {
           <div style={{ margin: '2.5rem 0', width: '100%' }}>
             <Display shadow caption='Design of JJApps' className={'wow bounceInLeft'} data-wow-delay="0.15s">
               <div style={{ padding: '1rem' }}>
-                <img width='100%' height='100%' src={design} style={{ maxWidth: '100%' }} />
+                <img width='100%' height='100%' src={design} style={{ maxWidth: '64rem' }} />
               </div>
             </Display>
           </div>
