@@ -27,6 +27,13 @@ code {
 
 .menu-icon {
     cursor: pointer;
+    width: 24px;
+    height: auto;
+}
+
+.menu-icon:hover {
+    color: #ff728c;
+    fill: none;
 }
 
 .menu-item {

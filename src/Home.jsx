@@ -1,5 +1,4 @@
 import { Button, Card, Code, Display, Divider, Grid, Link, Popover, Spacer, Tabs, Text } from '@geist-ui/core';
-import {  Compass, Github, Globe } from '@geist-ui/icons';
 import './Home.css';
 import urls from './urls';
 import appImg from './assets/app.png';
@@ -12,8 +11,12 @@ import docker from './icons/docker-original.svg';
 import nginx from './icons/nginx-original.svg';
 import redis from './icons/redis-original.svg';
 import mongo from './icons/mongodb-original.svg';
+import GithubLogo from './icons/Github';
+import ServiceLink from './icons/ServiceLink';
+import TranslateLogo from './icons/Translate';
 import { code_json } from './code/code_json';
 import { code_yaml } from './code/code_yaml';
+import { code_toml } from "./code/code_toml.js";
 import github_code from './assets/github.svg';
 import live_demo from './code/live-demo.png';
 import live_demo_run from './code/live_demo.gif';
@@ -100,10 +103,14 @@ export default function() {
                 <Link className={'head-link'} href={urls.JJApplication} target={'_blank'}>
                   Github
                 </Link>
+
                 <Spacer w={1.5} inline />
-                <Github size={24} className={'menu-icon'} onClick={() => nav(urls.JJApplication)}/><Spacer w={1} />
-                <Compass size={24} className={'menu-icon'} onClick={() => nav(urls.Service)} /><Spacer w={1} />
-                <Globe size={24} className={'menu-icon'} />
+                <GithubLogo className={'menu-icon'} onClick={() => nav(urls.JJApplication)}/>
+                <Spacer w={1.25} inline />
+                <ServiceLink className={'menu-icon'} onClick={() => nav(urls.Service)}/>
+                <Spacer w={1.25} inline />
+                <TranslateLogo className={'menu-icon'} onClick={() => {}}/>
+                <Spacer w={1.25} inline />
               </div>
             </Grid>
           </Grid.Container>
@@ -301,6 +308,11 @@ export default function() {
                   {code_yaml}
                 </Code>
               </Tabs.Item>
+              <Tabs.Item label='TOML' value='3'>
+                <Code block name='X.toml' my={0} style={{ fontFamily: 'consolas, monospace' }}>
+                  {code_toml}
+                </Code>
+              </Tabs.Item>
             </Tabs>
             <Spacer h={1} />
             <Text className={'home-page-title-second'}>Create your first microservice using <Text b>Fushin Stone</Text></Text>
@@ -368,7 +380,7 @@ export default function() {
             <Spacer h={0.5} />
             <Grid.Container gap={2.5}>
               <Grid md={24}>
-                <Button icon={<Github />} auto shadow type={'secondary'}>JJApplication</Button>
+                <Button icon={<GithubLogo />} auto shadow type={'secondary'}>JJApplication</Button>
               </Grid>
               <Grid md={24}>
                 <img src={github_code} style={{
